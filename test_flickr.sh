@@ -8,11 +8,6 @@ python test.py
     --testset 'flickr' \
     --alpha 0.4 \
     --gpu 0 \
-    --model asy \
-    --use_momentum \
-    --use_mom_eval \
-    --m_img 0.999 \
-    --m_aud 0.999 \
     --dropout_img 0.9 \
     --dropout_aud 0 \
     # --save_visualizations \
