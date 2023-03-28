@@ -1,7 +1,8 @@
-python test.py --test_data_path /home/notebook/data/personal/S9050086/vggsound/ \
-    --test_gt_path /home/notebook/data/personal/S9050086/vggss/masks/ \
-    --model_dir /home/notebook/code/personal/S9050086/EZ-VSL/checkpoints/ \
-    --experiment_name vgg10k_034 \
+python test.py 
+    --test_data_path [test data path] \
+    --test_gt_path [test gt path] \
+    --model_dir checkpoints/ \
+    --experiment_name vgg10k_001 \
     --testset 'vggss' \
     --alpha 0.4 \
     --gpu 0 \
