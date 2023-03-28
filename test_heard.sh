@@ -1,6 +1,8 @@
-python test.py --test_data_path /home/notebook/data/personal/S9050086/vggsound/ \
-    --test_gt_path /home/notebook/data/personal/S9050086/vggss/masks/ \
-    --model_dir /home/notebook/code/personal/S9050086/EZ-VSL/checkpoints/ \
+# heard
+python test.py 
+    --test_data_path [test data path] \
+    --test_gt_path [test gt path] \
+    --model_dir checkpoints/ \
     --experiment_name ez_vsl_heard_110 \
     --testset 'vggss_heard' \
     --alpha 0.4 \
@@ -15,10 +17,11 @@ python test.py --test_data_path /home/notebook/data/personal/S9050086/vggsound/ 
     # --save_visualizations \
     # --multiprocessing_distributed True
 
-
-python test.py --test_data_path /home/notebook/data/personal/S9050086/vggsound/ \
-    --test_gt_path /home/notebook/data/personal/S9050086/vggss/masks/ \
-    --model_dir /home/notebook/code/personal/S9050086/EZ-VSL/checkpoints/ \
+# unheard
+python test.py 
+    --test_data_path [test data path] \
+    --test_gt_path [test gt path] \
+    --model_dir checkpoints/ \
     --experiment_name ez_vsl_heard_110 \
     --testset 'vggss_unheard' \
     --alpha 0.4 \
