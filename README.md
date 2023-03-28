@@ -30,12 +30,12 @@ Data can be downloaded from [Unheard](https://github.com/stoneMo/EZ-VSL/blob/mai
 ## Training and Evaluation
 
 For training FNAC on Flickr:
-set the dataset path and train set ('flickr_10k' or 'flickr_144k') accordingly and run:
+set the dataset path, train set ('flickr_10k' or 'flickr_144k'), and experiment name accordingly and run:
 ```
 bash train_flickr.sh
 ```
 For evaluation:
-set the dataset path and train set ('flickr_10k' or 'flickr_144k') accordingly and run:
+set the dataset path, test set, and experiment name accordingly and run:
 ```
 bash test_flickr.sh
 ```
