@@ -7,9 +7,9 @@ rm -rf checkpoints/$EXPERIMENT
 echo $EXPERIMENT
 
 python3 train.py  \
-    --train_data_path /home/notebook/data/personal/S9050086/vggsound \
-    --test_data_path /home/notebook/data/personal/S9050086/flickr_soundnet/Data/ \
-    --test_gt_path /home/notebook/data/personal/S9050086/flickr_soundnet/Annotations/ \
+    --train_data_path [train data path] \
+    --test_data_path [test data path] \
+    --test_gt_path [test gt path] \
     --experiment_name $EXPERIMENT \
     --trainset 'vggss_10k' \
     --testset 'flickr' \
