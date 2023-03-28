@@ -1,9 +1,10 @@
 
 
-python test.py --test_data_path /home/notebook/data/personal/S9050086/flickr_soundnet/Data/ \
-    --test_gt_path /home/notebook/data/personal/S9050086/flickr_soundnet/Annotations/ \
-    --model_dir /home/notebook/code/personal/S9050086/EZ-VSL/checkpoints \
-    --experiment_name vgg10k_034 \
+python test.py 
+    --test_data_path [test data path] \
+    --test_gt_path [test gt path] \
+    --model_dir checkpoints \
+    --experiment_name vgg10k_001 \
     --testset 'flickr' \
     --alpha 0.4 \
     --gpu 0 \
@@ -15,6 +16,6 @@ python test.py --test_data_path /home/notebook/data/personal/S9050086/flickr_sou
     --dropout_img 0.9 \
     --dropout_aud 0 \
     # --save_visualizations \
-#     # --multiprocessing_distributed True
+    # --multiprocessing_distributed True
 
 
