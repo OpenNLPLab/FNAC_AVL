@@ -30,9 +30,6 @@ def get_arguments():
 
     parser.add_argument("--dropout_img", type=float, default=0, help="dropout for image")
     parser.add_argument("--dropout_aud", type=float, default=0, help="dropout for audio")
-    parser.add_argument('--m_img', default=0.9, type=float, metavar='M', help='momentum for imgnet')
-    parser.add_argument('--m_aud', default=0.9, type=float, metavar='M', help='momentum for audnet')
-    parser.add_argument('--use_momentum', action='store_true')
     parser.add_argument('--use_mom_eval', action='store_true')
 
     # Distributed params
@@ -191,6 +188,7 @@ def validate(testdataloader, audio_visual_model, object_saliency_model, viz_dir,
     utils.save_iou(evaluator_av_obj.ciou, 'av_obj', viz_dir)
 
 
+# we test different interpolation settings
 @torch.no_grad()
 def validate2(testdataloader, audio_visual_model, object_saliency_model, viz_dir, args):
     audio_visual_model.train(False)
