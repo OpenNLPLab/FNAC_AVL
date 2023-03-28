@@ -30,7 +30,6 @@ def get_arguments():
 
     parser.add_argument("--dropout_img", type=float, default=0, help="dropout for image")
     parser.add_argument("--dropout_aud", type=float, default=0, help="dropout for audio")
-    parser.add_argument('--use_mom_eval', action='store_true')
 
     # Distributed params
     parser.add_argument('--workers', type=int, default=8)
