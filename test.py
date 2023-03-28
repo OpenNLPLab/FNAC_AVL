@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import utils
 import numpy as np
 import argparse
-from model import EZVSL, Asy, ACAVL, Asy2
+from model import Asy
 from datasets import get_test_dataset, inverse_normalize, get_test_dataset_2
 import cv2
 
