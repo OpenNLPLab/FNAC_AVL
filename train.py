@@ -36,7 +36,7 @@ def get_arguments():
     parser.add_argument("--epochs", type=int, default=20, help="number of epochs")
     parser.add_argument('--batch_size', default=128, type=int, help='Batch Size')
     parser.add_argument("--init_lr", type=float, default=0.0001, help="initial learning rate")
-    parser.add_argument("--seed", type=int, default=42, help="random seed")
+    parser.add_argument("--seed", type=int, default=12345, help="random seed")
     parser.add_argument("--weight_decay", type=float, default=0.0001, help="l2 regu")
     parser.add_argument("--fnac_loss1_weight", type=float, default=100, )
     parser.add_argument("--fnac_loss2_weight", type=float, default=100, )
