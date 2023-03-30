@@ -72,9 +72,9 @@ class Asy(nn.Module):
         
         loss = F.cross_entropy(logits, labels) + F.cross_entropy(logits.permute(1, 0), labels)
 
-        fnac_loss1 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(logits, dim=1)) # 
-        fnac_loss2 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(frg_attn, dim=1)) #
-        fnac_loss3 = F.l1_loss(torch.softmax(img_attn, dim=1), torch.softmax(logits, dim=1)) #
+        fnac_loss1 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(logits, dim=1)) # FNS-1
+        fnac_loss2 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(frg_attn, dim=1)) # TNS
+        fnac_loss3 = F.l1_loss(torch.softmax(img_attn, dim=1), torch.softmax(logits, dim=1)) # FNS-2
     
         return [loss, fnac_loss1, fnac_loss2,  fnac_loss3], Slogits
 
