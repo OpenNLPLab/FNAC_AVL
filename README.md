@@ -1,6 +1,6 @@
 # FNAC_AVL
 
-Official implementation of FNAC. 
+Official Pytorch implementation of FNAC. 
 
 Our paper is accpeted to CVPR 2023:
 
