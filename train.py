@@ -26,9 +26,9 @@ def get_arguments():
     parser.add_argument('--testset', default='vggss', type=str, help='testset,(flickr or vggss)')
     parser.add_argument('--train_data_path', default='', type=str, help='Root directory path of train data')
     parser.add_argument('--test_data_path', default='', type=str, help='Root directory path of test data')
+    
     parser.add_argument('--test_gt_path', default='', type=str)
-
-    # ez-vsl hyper-params
+    # hyper-params
     parser.add_argument('--out_dim', default=512, type=int)
     parser.add_argument('--tau', default=0.03, type=float, help='tau')
 
@@ -112,9 +112,6 @@ def main_worker(gpu, ngpus_per_node, args):
     os.makedirs(model_dir, exist_ok=True)
     utils.save_json(vars(args), os.path.join(model_dir, 'configs.json'), sort_keys=True, save_pretty=True)
 
-    # create tensorboard writer
-    # writer = SummaryWriter(model_dir)
-
     # Create model
     model = Asy(args.tau, args.out_dim, args.dropout_img, args.dropout_aud)
 
@@ -133,7 +130,6 @@ def main_worker(gpu, ngpus_per_node, args):
     elif args.gpu is not None:
         torch.cuda.set_device(args.gpu)
         model.cuda(args.gpu)
-    # print(model)
 
     # Optimizer
     optimizer, scheduler = utils.build_optimizer_and_scheduler_adam(model, args)
@@ -201,9 +197,6 @@ def main_worker(gpu, ngpus_per_node, args):
         print(f'best_cIoU: {best_cIoU}')
         print(f'best_Auc: {best_Auc}')
 
-        # writer.add_scalar('cIoU', cIoU, epoch, walltime=None)
-        # writer.add_scalar('AUC', auc, epoch, walltime=None)
-
         # Checkpoint
         if args.rank == 0:
             ckp = {'model': model.state_dict(),
@@ -238,10 +231,7 @@ def train(train_loader, model, optimizer, epoch, args):
         if args.gpu is not None:
             spec = spec.cuda(args.gpu, non_blocking=True)
             image = image.cuda(args.gpu, non_blocking=True)
-        
-        if args.distill:
-            pass
-
+     
         loss, _ = model(image.float(), spec.float(), file_id)
 
         if epoch < args.warmup:
