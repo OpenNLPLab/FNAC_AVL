@@ -24,6 +24,5 @@ python train.py --multiprocessing_distributed \
     --dropout_img 0.9 \
     --dropout_aud 0 \
     --gpu 0 \
-    --seed 42 \
 
 
