@@ -72,11 +72,11 @@ class Asy(nn.Module):
         
         loss = F.cross_entropy(logits, labels) + F.cross_entropy(logits.permute(1, 0), labels)
 
-        asymetric_loss1 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(logits, dim=1)) # 
-        asymetric_loss2 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(frg_attn, dim=1)) #
-        asymetric_loss3 = F.l1_loss(torch.softmax(img_attn, dim=1), torch.softmax(logits, dim=1)) #
+        fnac_loss1 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(logits, dim=1)) # 
+        fnac_loss2 = F.l1_loss(torch.softmax(aud_attn, dim=1), torch.softmax(frg_attn, dim=1)) #
+        fnac_loss3 = F.l1_loss(torch.softmax(img_attn, dim=1), torch.softmax(logits, dim=1)) #
     
-        return [loss, asymetric_loss1, asymetric_loss2,  asymetric_loss3], Slogits
+        return [loss, fnac_loss1, fnac_loss2,  fnac_loss3], Slogits
 
     def forward(self, image, audio, name=None):
         # Image b*3*h*w 
