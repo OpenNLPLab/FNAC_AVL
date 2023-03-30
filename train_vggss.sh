@@ -25,4 +25,3 @@ python3 train.py  \
     --dropout_img 0.9 \
     --dropout_aud 0 \
     --gpu 0 \
-    --seed 42 \
