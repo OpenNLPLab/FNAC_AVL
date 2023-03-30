@@ -43,7 +43,7 @@ bash test_flickr.sh
 You can follow the same implementation to train and test on VGGSS and heard&unheard
 
 
-## Weights
+## Checkpoints
 coming soon
 
 ## Todo
