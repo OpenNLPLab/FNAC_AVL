@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import utils
 import numpy as np
 import argparse
-from model import Asy
+from model import FNAC
 from datasets import get_test_dataset, inverse_normalize, get_test_dataset_2
 import cv2
 
@@ -54,7 +54,7 @@ def main(args):
 
     # Models
 
-    audio_visual_model = Asy(args.tau, args.out_dim, args.dropout_img, args.dropout_aud)
+    audio_visual_model = FNAC(args.tau, args.out_dim, args.dropout_img, args.dropout_aud)
    
     from torchvision.models import resnet18
     object_saliency_model = resnet18(pretrained=True)
