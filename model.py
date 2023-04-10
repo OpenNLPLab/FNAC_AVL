@@ -9,9 +9,9 @@ import os
 import copy
 
 
-class Asy(nn.Module):
+class FNAC(nn.Module):
     def __init__(self, tau, dim,  dropout_img, dropout_aud):
-        super(Asy, self).__init__()
+        super(FNAC, self).__init__()
         self.tau = tau
 
         # Vision model
