@@ -46,12 +46,13 @@ You can follow the same implementation to train and test on VGGSS and heard&unhe
 ## Checkpoints
 
 |     Train Set   |     Test Set    |   VGG-SS  CIoU     |  VGG_SS AUC  | url | 
-|:--------------:|:---------------:|:------------:|:-----:|:---:|:----:|:----:| 
-|   Flickr 10k   | VGG-SS |     81.93    | 62.58 | [checkpoints]() | 
-|   Flickr 144k  | VGG-SS |     83.13    | 63.06 | [checkpoints]() | 
-|  VGG-Sound 10k |      VGG-SS     |     37.18    | 38.75 | [checkpoints]() | 
-| VGG-Sound 144k |      VGG-SS     |     38.85    | 39.54 | [checkpoints]() | 
+|:--------------:|:---------------:|:------------:|:-----:|:---:|
+|   Flickr 10k   | VGG-SS |    35.27   | 38.00 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
+|   Flickr 144k  | VGG-SS |    33.93  | 37.29 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
+|  VGG-Sound 10k |      VGG-SS     |    37.29    | 38.99 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
+| VGG-Sound 144k |      VGG-SS     |     39.50    | 39.66 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
 
+We found that Flickr test set result is unstable sue to small size (255 samples), we report results evaluations on VGG-SS.
 
 ## Citation
 
