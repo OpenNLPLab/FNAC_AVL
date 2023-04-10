@@ -52,7 +52,7 @@ You can follow the same implementation to train and test on VGGSS and heard&unhe
 |  VGG-Sound 10k |      VGG-SS     |    37.29    | 38.99 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
 | VGG-Sound 144k |      VGG-SS     |     39.50    | 39.66 | [checkpoints](https://drive.google.com/drive/folders/15NoQSmC6zIetq771pZ_Q6Z7dea957Hhz?usp=share_link) | 
 
-We found that Flickr test set result is unstable sue to small size (255 samples), we report results evaluations on VGG-SS.
+<!-- We found that Flickr test set result is unstable sue to small size (255 samples), we report results evaluations on VGG-SS. -->
 
 ## Citation
 
