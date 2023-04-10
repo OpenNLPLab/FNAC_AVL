@@ -10,7 +10,7 @@ from torch import multiprocessing as mp
 import torch.distributed as dist
 
 import utils
-from model import Asy
+from model import FNAC
 from datasets import get_train_dataset, get_test_dataset, get_train_dataset_2, get_test_dataset_2, get_all_classes
 
 # from torch.utils.tensorboard import SummaryWriter   
@@ -19,7 +19,7 @@ def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_dir', type=str, default='./checkpoints', help='path to save trained model weights')
     parser.add_argument('--experiment_name', type=str, default='ezvsl_vggss', help='experiment name (used for checkpointing and logging)')
-    parser.add_argument('--model', type=str, default='asy', choices=['asy', 'mom', 'asy2'])
+    # parser.add_argument('--model', type=str, default='asy', choices=['asy', 'mom', 'asy2'])
 
     # Data params
     parser.add_argument('--trainset', default='vggss', type=str, help='trainset (flickr or vggss)')
@@ -113,7 +113,7 @@ def main_worker(gpu, ngpus_per_node, args):
     utils.save_json(vars(args), os.path.join(model_dir, 'configs.json'), sort_keys=True, save_pretty=True)
 
     # Create model
-    model = Asy(args.tau, args.out_dim, args.dropout_img, args.dropout_aud)
+    model = FNAC(args.tau, args.out_dim, args.dropout_img, args.dropout_aud)
 
     if not torch.cuda.is_available():
         print('using CPU, this will be slow')
