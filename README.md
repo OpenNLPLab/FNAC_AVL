@@ -44,9 +44,13 @@ You can follow the same implementation to train and test on VGGSS and heard&unhe
 
 
 ## Checkpoints
-coming soon
 
-## Todo
+|     Train Set   |     Test Set    |   VGG-SS  CIoU     |  VGG_SS AUC  | url | 
+|:--------------:|:---------------:|:------------:|:-----:|:---:|:----:|:----:| 
+|   Flickr 10k   | VGG-SS |     81.93    | 62.58 | [checkpoints]() | 
+|   Flickr 144k  | VGG-SS |     83.13    | 63.06 | [checkpoints]() | 
+|  VGG-Sound 10k |      VGG-SS     |     37.18    | 38.75 | [checkpoints]() | 
+| VGG-Sound 144k |      VGG-SS     |     38.85    | 39.54 | [checkpoints]() | 
 
 
 ## Citation
